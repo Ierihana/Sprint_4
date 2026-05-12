@@ -10,9 +10,11 @@ public class MainPage {
     private final WebDriver driver;
     private final By bottomOrderButton = By.xpath(".//div[@class='Home_FinishButton__1_cWm']/button[text()='Заказать']");
     private final By topOrderButton = By.xpath(".//div[@class='Header_Nav__AGCXC']/button[text()='Заказать']");
+    private final String URL = "https://qa-scooter.praktikum-services.ru/";
+
     //     Открыть страницу
     public void open(){
-        driver.get("https://qa-scooter.praktikum-services.ru/");
+        driver.get(URL);
     }
 
 
@@ -59,9 +61,5 @@ public class MainPage {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
         wait.until(ExpectedConditions.visibilityOfElementLocated(topOrderButton)).click();
     }
-
-
-
-
 
 }

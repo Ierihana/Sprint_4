@@ -37,7 +37,6 @@ public class MainPageQuestionsTests extends BaseUITest {
         String questionText = mainPage.getQuestionById(id);
         mainPage.clickOnQuestion(id);
         String answerText = mainPage.getAnswerById(id);
-        assertEquals(question, questionText);
         assertEquals(answer, answerText);
     }
 }

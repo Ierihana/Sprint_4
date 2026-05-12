@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
@@ -23,12 +24,14 @@ public class BaseUITest {
 
     public void startChromeBrowser(){
         driver = new ChromeDriver();
+        WebDriverManager.chromedriver().setup();
         mainPage = new MainPage(driver);
         orderPage = new OrderPage(driver);
     }
 
     public void startFirefoxBrowser(){
         driver = new FirefoxDriver();
+        WebDriverManager.firefoxdriver().setup();
         mainPage = new MainPage(driver);
         orderPage = new OrderPage(driver);
     }
